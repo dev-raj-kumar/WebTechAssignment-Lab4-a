@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Qualifications</title>
+    <style media="screen">
+    body{
+      margin: 2% 5%;
+    }
+    .tab {
+      float: left;
+      border: 2px solid #3ec1d3;
+      background-color: #f1f1f1;
+      width: 30%;
+      height: 400px;
+    }
+    .tab button {
+      display: block;
+      background-color: inherit;
+      color: black;
+      padding: 22px 16px;
+      width: 100%;
+      font-size: 1.2rem;
+      border: none;
+      outline: none;
+      text-decoration: underline;
+      text-align: center;
+      cursor: pointer;
+    }
+    .tab button:hover {
+      background-color: #f0a500;
+    }
+    .tab button.active {
+      background-color: #f0a500;
+    }
+    .tabcontent {
+      float: right;
+      background: url(bg.jpg) no-repeat;
+      background-size: 100%;
+
+      border: 5px solid #3ec1d3;
+      width: 65%;
+      height: 400px;
+      text-align: center;
+      display: none;
+
+    }
+    .tb{
+      padding-top: 10%;
+      font-size: 1.2rem;
+      height : 100%;
+      color: #ff165d;
+      font-weight: 900;
+      background-color: #ffffff;
+      opacity: 0.6;
+    }
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  h1{
+    padding: 10px;
+background-color: black;
+color: white;
+ text-align: center;
+animation: mymove 2s infinite;
+margin-top: -10px;
+}
+@keyframes mymove {
+    from {background-color:#3ec1d3;}
+    to {background-color:#ff165d;}
+    }
+    </style>
+  </head>
+  <body>
+    <h1 class="heading">Name :- Devraj Kumar &nbsp&nbsp Roll No :- 1906111 &nbsp&nbsp Subject Code :- CSL3403</h1>
+
+      <div class="" style="padding-top : 3%; margin : 5%;">
+        <div class="tab">
+          <img src="tt.png" style="margin:auto; display:block; height:100px;margin :2% auto" alt="degree image">
+          <button  class="btn" onmouseover="openTab(event,'10')">Matriculation</button>
+          <button  class="btn" onmouseover="openTab(event,'12')">Intermediate</button>
+          <button  class="btn" onmouseover="openTab(event,'b.tech')">Graduation</button>
+
+          <p style="text-align : center; margin-top :5%;">Hover over the upper segments to view</p>
+        </div>
+        <div class="tabcontent" id="10" >
+          <div class="tb">
+            School - St. Paul's High School , Patna
+            <br>
+            <br>
+            Roll No - 6267401
+            <br><br>
+            Percentage - 97.8
+            <br><br>
+            Year of Passing - 2016
+            <br><br>
+            Board - ICSE
+          </div>
+
+        </div>
+        <div class="tabcontent" id="12" >
+          <div class="tb">
+            School - St. Michael's High School , Patna
+            <br>
+            <br>
+            Roll No - 7637904
+            <br><br>
+            Percentage - 91.8
+            <br><br>
+            Year of Passing - 2018
+            <br><br>
+            Board - CBSE
+          </div>
+
+        </div>
+        <div class="tabcontent" id="b.tech" >
+          <div class="tb">
+            College - National Institute of Technology , Patna
+            <br>
+            <br>
+            Roll No - 1906111
+            <br><br>
+            CGPA - 9.05(till 2nd semester)
+            <br><br>
+            Semester - 3
+            <br><br>
+            Year of Graduation - 2023
+          </div>
+
+        </div>
+       <div class="clearfix"></div>
+      </div>
+
+    <script>
+function openTab(evt, qual) {
+  console.log(qual);
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("btn");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(qual).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+  </body>
+</html>
